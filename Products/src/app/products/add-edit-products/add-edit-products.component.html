@@ -1,0 +1,22 @@
+<form>
+    <div class="mb-3">
+        <label for="comments" class="form-label">Name</label>
+        <input type="text" class="form-control" [(ngModel)]="name" name="Name" placeholder="Enter Product Name" required>
+      </div>
+    
+      <div class="mb-3">
+        <label for="comments" class="form-label">Category</label>
+        <input type="text" class="form-control" [(ngModel)]="category" name="category" placeholder="Enter Product Category">
+      </div>
+
+      <div class="mb-3">
+        <label for="comments" class="form-label">Brand</label>
+        <input type="text" class="form-control" [(ngModel)]="brand" name="Brand" placeholder="Enter Brand name">
+      </div>
+      <button (click)="addProduct()" *ngIf="product.id==0" class="btn btn-primary">
+        Add
+      </button>
+      <button (click)="updateProduct()" *ngIf="product.id!=0" class="btn btn-primary">
+        Update
+      </button>
+</form>
